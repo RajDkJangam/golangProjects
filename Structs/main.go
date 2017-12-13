@@ -28,4 +28,15 @@ func main() {
 	zalak.lastName = "Shah"
 	fmt.Println(zalak)
 	fmt.Printf("%+v\n", zalak)
+	//zalakPtr := &zalak
+	zalak.updateName("Ankur")
+	zalak.print()
+}
+
+func (p person) print() {
+	fmt.Printf("%+v\n", p)
+}
+
+func (p *person) updateName(newFirstName string) {
+	(*p).firstName = newFirstName
 }
